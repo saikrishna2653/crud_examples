@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crud_example
+    username: postgres
+    password: Q4S3C2v1
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+        hibernate.hbm2ddl.auto: update
