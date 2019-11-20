@@ -25,13 +25,14 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency> -->
+
 		<!-- mySQL DB -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.21</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-solr</artifactId>
@@ -41,7 +42,7 @@
 			<artifactId>ehcache-clustered</artifactId>
 		</dependency>
 	</dependencies>
- 
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
