@@ -60,12 +60,12 @@
         <repository>
             <id>deployment</id>
             <name>Internal Releases</name>
-            <url>http://54.159.147.172:8081/repository/employee_dept_snapshot/</url>
+            <url>http://54.208.252.232:8081/repository/employee_dept_snapshot/</url>
         </repository>
         <snapshotRepository>
             <id>deployment</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://54.159.147.172:8081/repository/employee_dept-release/</url>
+            <url>http://54.208.252.232:8081/repository/employee_dept-release/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
