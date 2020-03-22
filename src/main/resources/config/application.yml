@@ -6,4 +6,4 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     properties:
-        hibernate.hbm2ddl.auto: create
+        hibernate.hbm2ddl.auto: update
