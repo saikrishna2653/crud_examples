@@ -59,7 +59,7 @@ pipeline {
           #
           # copy files to server
           #
-         su dockeradmin -c '$USER_ID@$HOST_NAME "kubectl apply -f /opt/kubernetes_Deloy/crud-app-deploy.yml; kubectl apply -f /opt/kubernetes_Deloy/crud-app-service.yml"'
+         su dockeradmin -c 'ssh $USER_ID@$HOST_NAME "kubectl apply -f /opt/kubernetes_Deloy/crud-app-deploy.yml; kubectl apply -f /opt/kubernetes_Deloy/crud-app-service.yml"'
         '''		
       }
     }
