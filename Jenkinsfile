@@ -27,19 +27,14 @@ pipeline {
 		docker image rm -f department_employee || true;
 		 cd /opt/docker; 
 		docker build -t department_employee .
+		docker tag department_employee saikrishna2653/department_employee; 
+		docker push saikrishna2653/department_employee; 
+		docker image rm -f department_employee || true;
+		docker rmi department_employee saikrishna2653/department_employee;
 		''', 
 		execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, removePrefix: '/target', sourceFiles: '**/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
       }
-   }
-   stage('Push Docker images to registry'){
-      steps {
-      sshPublisher(publishers: [sshPublisherDesc(configName: 'tools-server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '''docker tag department_employee saikrishna2653/department_employee; 
-		docker push saikrishna2653/department_employee; 
-		docker image rm -f department_employee || true;
-		docker rmi department_employee saikrishna2653/department_employee''', 
-		execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '//opt//docker', remoteDirectorySDF: false, removePrefix: '/target', sourceFiles: '**/*.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
-      }
-   }
+   }  
     stage('Copy manifest files to server') { 
 	 steps {   
       dir('kubernetes-my-appln') {
