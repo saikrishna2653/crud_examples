@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'master' }
    environment {
-     HOST_NAME="3.237.40.210"
+     HOST_NAME="35.170.73.113"
      def USER_ID="dockeradmin"
    }
   stages {
